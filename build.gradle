@@ -30,14 +30,18 @@ ext {
 dependencies {
 	implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.ai:spring-ai-vertex-ai-gemini-spring-boot-starter:1.0.0-SNAPSHOT'
+	//implementation 'org.springframework.ai:spring-ai-vertex-ai-gemini-spring-boot-starter:1.0.0-SNAPSHOT'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'com.theokanning.openai-gpt3-java:client:0.11.0'
-	implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.5'
+	implementation 'org.springframework.boot:spring-boot-starter-web'  // Spring Boot Starter Web (기본적으로 Jackson 포함)
+	implementation 'com.fasterxml.jackson.core:jackson-databind'  // Jackson Databind
+	implementation 'com.fasterxml.jackson.core:jackson-core'      // Jackson Core
+	implementation 'com.fasterxml.jackson.core:jackson-annotations' // Jackson Annotations
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
 
 dependencyManagement {
